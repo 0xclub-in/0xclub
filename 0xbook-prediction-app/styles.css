@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(120deg, #121212, #1e1e1e);
+  color: #f5f5f5;
+}
+
+.topbar {
+  background: #f5c400;
+  color: #101010;
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 4px solid #101010;
+}
+
+.topbar h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  letter-spacing: 0.04em;
+}
+
+.topbar p {
+  margin: 0;
+  font-weight: 700;
+}
+
+.topbar a {
+  color: #101010;
+  text-decoration: underline;
+}
+
+.app-shell {
+  max-width: 980px;
+  margin: 1rem auto;
+  padding: 0 1rem 2rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.card {
+  background: #181818;
+  border: 1px solid #2d2d2d;
+  border-left: 6px solid #f5c400;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  margin-top: 0;
+  color: #f5c400;
+}
+
+.balance {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.fund-actions {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+button {
+  background: #f5c400;
+  color: #101010;
+  border: 0;
+  border-radius: 8px;
+  padding: 0.65rem 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(0.95);
+}
+
+button.secondary {
+  background: #2c2c2c;
+  color: #fff;
+  border: 1px solid #f5c400;
+}
+
+.form-grid {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin-bottom: 0.8rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.95rem;
+}
+
+input,
+select {
+  padding: 0.55rem 0.65rem;
+  border-radius: 8px;
+  border: 1px solid #3b3b3b;
+  background: #101010;
+  color: #fff;
+}
+
+.hint {
+  min-height: 1.2rem;
+  color: #d9d9d9;
+  margin-bottom: 0;
+}
+
+.small-note {
+  font-size: 0.84rem;
+  opacity: 0.9;
+}
+
+.win {
+  color: #59d66f;
+}
+
+.loss {
+  color: #ff7171;
+}
+
+#activityFeed {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+#activityFeed li {
+  background: #111;
+  border: 1px solid #2c2c2c;
+  border-radius: 8px;
+  padding: 0.6rem;
+}

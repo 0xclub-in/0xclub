@@ -1,11 +1,9 @@
 // main.js – 0xClub 3D Website
+import './styles.css?v=2';
 
-// ─── Service Worker ───
 if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('service-worker.js')
-      .then(reg => console.log('SW registered:', reg.scope))
-      .catch(err => console.error('SW failed:', err));
+  navigator.serviceWorker.getRegistrations().then((registrations) => {
+    registrations.forEach((registration) => registration.unregister());
   });
 }
 
@@ -122,9 +120,9 @@ if ('serviceWorker' in navigator) {
       (Math.random() - 0.5) * 30 - 10
     );
     mesh.userData = {
-      rotSpeed: { 
-        x: (Math.random() - 0.5) * 0.004, 
-        y: (Math.random() - 0.5) * 0.004 
+      rotSpeed: {
+        x: (Math.random() - 0.5) * 0.004,
+        y: (Math.random() - 0.5) * 0.004
       },
       floatSpeed: Math.random() * 0.25 + 0.1,
       floatAmp: Math.random() * 3 + 1,

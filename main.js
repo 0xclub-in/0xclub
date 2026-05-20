@@ -1,5 +1,4 @@
 // main.js – 0xClub 3D Website
-import './styles.css';
 
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.getRegistrations().then((registrations) => {

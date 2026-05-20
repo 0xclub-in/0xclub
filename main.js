@@ -266,17 +266,6 @@ if ('serviceWorker' in navigator) {
   }
 })();
 
-// ─── Event Banner Dismiss ───
-(function initBanner() {
-  const banner = document.getElementById('eventBanner');
-  const closeBtn = document.getElementById('bannerClose');
-  if (banner && closeBtn) {
-    closeBtn.addEventListener('click', () => {
-      banner.classList.add('hidden');
-    });
-  }
-})();
-
 // ─── View All Projects Card → scroll to Coming Soon ───
 (function initViewAll() {
   const viewAllCard = document.getElementById('viewAllCard');
